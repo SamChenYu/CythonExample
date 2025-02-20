@@ -1,10 +1,6 @@
-from setuptools import setup, Extension
+from setuptools import setup
 from Cython.Build import cythonize
 
 setup(
-    ext_modules = cythonize([
-        Extension("example_threads", ["example_threads.pyx", "example_threads.cpp"],
-                    language="c++",
-                    )
-    ])
+    ext_modules = cythonize("primes.py")
 )
